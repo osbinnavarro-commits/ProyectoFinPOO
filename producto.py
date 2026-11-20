@@ -36,9 +36,7 @@ class Producto(ABC):
     def esta_disp(self, dia):
         pass
 
+    def contar_plat(self):
+        return 0
     def combo(self):
-        return self.combo
-
-
-
-
+        return self._combo
