@@ -1,10 +1,21 @@
-import producto as Pr
+import producto as Producto
 
-class Bebidas(Pr):
+class Bebidas(Producto):
     def __init__(self, nombre, precio, precio_tipo):
-        super().__init__(nombre, precio)
+        super().__init__(nombre, precio, es_combo = False)
         self.precio_tipo = precio_tipo
 
+    @property
+    def precio_tipo(self):
+        return self.precio_tipo
+
+    @precio_tipo.setter
+    def precio_tipo(self, valor):
+        if valor != 1.0 and valor != 3.0:
+            raise ValueError("El precio el vaso debe ser 1.0 y de la jarra debe ser 3.0")
+        self._precio_tipo = float(valor)
+
     def cal_precio():
+        return 
 
     def esta_disponible(self, dia):

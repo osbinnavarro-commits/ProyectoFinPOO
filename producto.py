@@ -1,28 +1,29 @@
-from abc import ABC, methodabstract  
+from abc import ABC, abstractmethod
+
 class Producto(ABC):
-    def __init__(self, nombre, precio, combo):
+    def __init__(self, nombre, precio, es_combo = False):
         self.nombre = nombre
         self.precio = precio
-        self.combo = combo
+        self._combo = es_combo
 
     @property
     def nombre(self):
         return self._nombre
 
     @nombre.setter
-    def nombre(self, valor: str) -> None:
+    def nombre(self, valor: str):
         if not valor or not valor.strip():
-            raise ValueError("El nombre del producto no puede estar vacío.")
+            raise ValueError("El producto debe tener un nombre")
         self._nombre = valor.strip()
 
     @property
-    def precio(self) -> float:
+    def precio(self):
         return self._precio
 
     @precio.setter
-    def precio(self, valor: float) -> None:
+    def precio(self, valor: float):
         if valor <= 0:
-            raise ValueError("El precio del producto debe ser mayor que cero.")
+            raise ValueError("El precio del producto debe ser mayor que cero")
         self._precio = round(float(valor), 2)
 
     @abstractmethod 
@@ -37,5 +38,7 @@ class Producto(ABC):
 
     def combo(self):
         return self.combo
+
+
 
 
