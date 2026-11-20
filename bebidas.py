@@ -19,4 +19,7 @@ class Bebidas(Producto):
         return round(self._precio * self._precio_tipo, 2)
 
     def esta_disponible(self, dia):
-        pass
+        return True
+    
+    def contar_platos(self):
+        return 0

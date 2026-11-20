@@ -1,4 +1,4 @@
-import producto as Producto
+from producto import Producto
 
 class Plato(Producto):
     def __init__(self, nombre, precio, dia_venta: list):

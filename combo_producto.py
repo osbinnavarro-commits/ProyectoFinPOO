@@ -13,7 +13,7 @@ class ComboProducto:
     @producto.setter
     def producto(self, lista_productos):
         if len(lista_productos) < 2:
-            raise ValueError("Un combo debe contener al menos 2 productos.")
+            raise ValueError("Un combo debe contener al menos 2 productos")
         for prod in lista_productos:
             if self._combo_dueno is not None and prod is self._combo_dueno:
                 raise ValueError("Un combo no puede contenerse a sí mismo.")

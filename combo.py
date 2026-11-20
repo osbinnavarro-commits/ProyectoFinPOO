@@ -1,5 +1,5 @@
-import producto as Producto
-import combo_producto as ComboProducto
+from producto import Producto
+from combo_producto import ComboProducto
 
 class Combo(Producto):
     def __init__(self, nombre, combo_producto: ComboProducto):

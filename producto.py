@@ -11,7 +11,7 @@ class Producto(ABC):
         return self._nombre
 
     @nombre.setter
-    def nombre(self, valor: str):
+    def nombre(self, valor):
         if not valor or not valor.strip():
             raise ValueError("El producto debe tener un nombre")
         self._nombre = valor.strip()
@@ -21,7 +21,7 @@ class Producto(ABC):
         return self._precio
 
     @precio.setter
-    def precio(self, valor: float):
+    def precio(self, valor):
         if valor <= 0:
             raise ValueError("El precio del producto debe ser mayor que cero")
         self._precio = round(float(valor), 2)
