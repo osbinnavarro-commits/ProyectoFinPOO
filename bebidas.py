@@ -18,8 +18,9 @@ class Bebidas(Producto):
     def cal_precio(self):
         return round(self._precio * self._precio_tipo, 2)
 
-    def esta_disponible(self, dia):
+    def esta_disp(self, dia):
         return True
     
     def contar_platos(self):
         return 0
+
