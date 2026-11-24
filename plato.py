@@ -21,5 +21,5 @@ class Plato(Producto):
     def esta_disp(self, dia):
         return dia.strip().lower() in self._dia_venta
 
-    def contar_platos(self):
+    def contar_plat(self):
         return 1

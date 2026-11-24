@@ -41,8 +41,8 @@ class ComboProducto:
                 return False
         return True
 
-    def contar_platos(self):
+    def contar_plat(self):
         total = 0
         for prod in self._producto:
-            total += prod.contar_platos()
+            total += prod.contar_plat()
         return total

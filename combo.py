@@ -18,5 +18,5 @@ class Combo(Producto):
     def esta_disp(self, dia):
         return self._combo_producto.esta_disp(dia)
 
-    def contar_platos(self):
-        return self._combo_producto.contar_platos()
+    def contar_plat(self):
+        return self._combo_producto.contar_plat()

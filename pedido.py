@@ -44,14 +44,14 @@ class Pedido(ABC):
     def pagos_pedido(self):
         return list(self._pagos_pedido)
 
-    def agregar_producto(self, producto, cantidad):
+    def agre_prod(self, producto, cantidad):
         if self.estado_actual != "REGISTRADO":
             raise ValueError("Solo se pueden agregar productos en REGISTRADO.")
         item = ProductoPedido(producto, cantidad, self, self.estado_actual)
         self._productos_pedido.append(item)
         return item
 
-    def quitar_producto(self, producto):
+    def quit_prod(self, producto):
         if self.estado_actual != "REGISTRADO":
             raise ValueError("Solo se pueden quitar productos en REGISTRADO.")
         for i, item in enumerate(self._productos_pedido):

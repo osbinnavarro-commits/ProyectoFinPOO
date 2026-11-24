@@ -7,7 +7,7 @@ class Bebidas(Producto):
 
     @property
     def precio_tipo(self):
-        return self.precio_tipo
+        return self._precio_tipo
 
     @precio_tipo.setter
     def precio_tipo(self, valor):
@@ -21,6 +21,6 @@ class Bebidas(Producto):
     def esta_disp(self, dia):
         return True
     
-    def contar_platos(self):
+    def contar_plat(self):
         return 0
 

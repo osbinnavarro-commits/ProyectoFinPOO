@@ -27,16 +27,15 @@ class Producto(ABC):
         self._precio = round(float(valor), 2)
 
     @abstractmethod 
-
     def cal_precio(self):
         pass 
 
     @abstractmethod 
-
     def esta_disp(self, dia):
         pass
 
     def contar_plat(self):
         return 0
+    
     def combo(self):
         return self._combo

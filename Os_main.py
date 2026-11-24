@@ -20,7 +20,7 @@ mocochinchi = Bebidas("Mocochinchi", 6.0, 1.0)
 menu = [silpancho, pique, chicharron, sopa_mani, mocochinchi]
 
 # 2. Armar un combo (Variante E: 10% descuento)
-cp = ComboProducto([silpancho, mocochinchi])
+cp = ComboProducto([chicharron, mocochinchi])
 combo_valluno = Combo("Combo Valluno", cp)
 menu.append(combo_valluno)
 
@@ -35,8 +35,8 @@ subtotal = pedido.cal_subtotal()
 recargo = pedido.cal_recargo()
 total = round(subtotal + recargo, 2)
 
-pago = PagoEfectivo(total, cod_recibo=101, monto_recibido=50.0)
-cambio = pago.cal_cambio(50.0)
+pago = PagoEfectivo(total, cod_recibo=101, monto_recibido=79.8)
+cambio = pago.cal_cambio(pago._monto_recibido)
 registro = pedido.realizar_pago(pago)
 
 print(f"Cliente: {cliente.nombre}")
